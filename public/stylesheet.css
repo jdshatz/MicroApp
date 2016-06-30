@@ -8,7 +8,7 @@ body {
 	text-align: center;
 	font-color: black;
 	background-color: #b3daff;
-/*	background-image: url("");*/
+	/*background-image: url("cultureshock.jpg");*/
 	padding: 0 40px;
 	margin: 0 auto;
 	width: 100%;
@@ -150,7 +150,7 @@ img {
 }
 
 
-
+/*
 .BQ {
 	color: black;
 	text-align: left;
@@ -158,8 +158,8 @@ img {
 	padding-right: 110px;
 	background-color: black;
 	border-radius: 2000px;
-	border-color: white 200px;
-}
+	border-color: white 200px;*/
+/*}*/
 
 .title {
 	background-color: black;
