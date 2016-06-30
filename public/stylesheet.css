@@ -2,24 +2,25 @@
 
 /* UNIFORM BODY */
 
-
 body {
 	font-family: sans-serif;
 	text-align: center;
-	font-color: black;
-	background-color: #b3daff;
-	/*background-image: url("cultureshock.jpg");*/
+
+	background:
+	linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+	linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+	background-color:#708090;
+	background-size: 64px 128px
+
 	padding: 0 40px;
 	margin: 0 auto;
 	width: 100%;
+	height: 100%;
 }
-
-/* UNIFORM HEADER */
 
 .header {
 	width: 100%;
 	height: auto;
-	border-bottom: 2px #3A3A38 solid;
 }
 
 .headerContent {
@@ -32,7 +33,6 @@ body {
 	margin: 0 auto;
 	display: block;
 }
-
 
 /* BEGIN UNIFORM NAVBAR */
 
@@ -52,6 +52,7 @@ body {
 .header > .headerContent > .navbar > p {
 	float: left;
 }
+
 .header > .headerContent > .navbar > ul {
 	margin: 0;
 	padding: 0;
@@ -92,9 +93,6 @@ body {
 }
 
 
-
-
-
 /* UNIFORM Social Media Side Bar */
 
 .sociialnavbar {
@@ -104,7 +102,6 @@ body {
 	border-bottom-right-radius: 2em;
 	margin: 0 auto;
 	margin-top: 72px;
-/*	background-color: #EDCB62;*/
 	padding: 0 -100 0 0;
 	position: fixed;
 }
@@ -121,9 +118,6 @@ body {
 	list-style-type: none;
 	width: 40px;
 }	
-
-
-/*stylesheet.css*/
 
 h1 {
 	text-align: center;
@@ -149,67 +143,20 @@ img {
 	opacity: 500;
 }
 
-
-
-.BQ {
-	color: black;
-	text-align: left;
-	padding-left: 110px;
-	padding-right: 110px;
-	background-color: black;
-	border-radius: 2000px;
-	border-color: white 200px;
-}
-
-.title {
-/*	background-color: black;*/
-	padding-left: 30px;
-	padding-right: 30px;
-/*	background-color: black;*/
-	border-radius: 2500px;
-	
-	margin-left: 300px;
-	margin-right: 450px;
-}
-
 span {
 	color: tan;
 }
 
-/*Modal Stuff*/
-
-/*#modal-bg {
-	position: absolute;
-	color: #000;
-	background-color: #ff0000;
-	height: 1000;
-	width: 100%;
-	top: 0;
-	left: 0;
-	opacity: 50;
-	display: none;
-}*/
-/*
-#modal {
-	position: fixed;
-	background-color: #990000;
-	left: 500px;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: 10% auto;
-	width: 380px;
-	height: 380px;
-	border-radius: 40px;
-	display: none;
-	z-index: 500;
-}
-
-#img_lg
-*/
-
-
 /* START - UNIFORM FOOTER */
 
+.footer {
+	position:relative;
+	height:100px;
+	width: 100%;
+}
+
+.footer p{
+	text-align:center;
+}
 
 /* END - UNIFORM FOOTER 
