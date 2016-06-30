@@ -22,7 +22,7 @@ get "/profiles" do
 end
 
 get "/signup" do
-	erb :signin
+	erb :signup
 end
 
 post "/signup" do
