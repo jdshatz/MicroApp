@@ -16,10 +16,17 @@ get "/myprofile" do
 	erb :myprofile
 end
 
-get "/profiles" do 
+get "/profiles" do
+	@anything = User.all 
 	erb :profiles
 end
 
-get "/signin" do
+get "/signup" do
 	erb :signin
 end
+
+post "/signup" do
+	User.create(:username => params[:username], :password => params[:password])
+end
+
+
