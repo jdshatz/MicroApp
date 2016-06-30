@@ -5,21 +5,21 @@ require "./models"
 set :database, "sqlite3:database.sqlite3"
 
 get "/" do 
-  "Hello"
+	erb :index
 end
 
 get "/blog" do
-  "Blog"
+	erb :blog
 end
 
 get "/myprofile" do
-  "My Profile"
+	erb :myprofile
 end
 
 get "/profiles" do 
-  "Profiles"
+	erb :profiles
 end
 
 get "/signin" do
-  "Sign yourself in"
+	erb :signin
 end
