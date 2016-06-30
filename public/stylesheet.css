@@ -150,7 +150,7 @@ img {
 }
 
 
-/*
+
 .BQ {
 	color: black;
 	text-align: left;
@@ -158,14 +158,14 @@ img {
 	padding-right: 110px;
 	background-color: black;
 	border-radius: 2000px;
-	border-color: white 200px;*/
-/*}*/
+	border-color: white 200px;
+}
 
 .title {
-	background-color: black;
+/*	background-color: black;*/
 	padding-left: 30px;
 	padding-right: 30px;
-	background-color: black;
+/*	background-color: black;*/
 	border-radius: 2500px;
 	
 	margin-left: 300px;
@@ -178,7 +178,7 @@ span {
 
 /*Modal Stuff*/
 
-#modal-bg {
+/*#modal-bg {
 	position: absolute;
 	color: #000;
 	background-color: #ff0000;
@@ -188,8 +188,8 @@ span {
 	left: 0;
 	opacity: 50;
 	display: none;
-}
-
+}*/
+/*
 #modal {
 	position: fixed;
 	background-color: #990000;
@@ -206,7 +206,7 @@ span {
 }
 
 #img_lg
-
+*/
 
 
 /* START - UNIFORM FOOTER */
