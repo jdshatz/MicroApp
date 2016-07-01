@@ -2,6 +2,7 @@ require "sinatra"
 require "sinatra/activerecord"
 require "./models"
 
+enable:sessions
 set :database, "sqlite3:database.sqlite3"
 
 get "/" do 
