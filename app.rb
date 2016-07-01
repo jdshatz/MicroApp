@@ -42,7 +42,9 @@ end
 
 #Sign-in button/activate session
 post "/signin" do
-	  if @user.username == params[:username] && @user.password == params[:password] 
+	@user = User.where(username: params[:username]).first
+	  if @user != null && @user.password == params[:password] 
+	  	session[:user_id] = @user.id
 	  	redirect '/'
 	  else
 		redirect '/signin' #Is this redundant, if we don't have a sign-in page?
