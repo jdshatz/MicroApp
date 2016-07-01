@@ -31,7 +31,21 @@ end
 post "/signup" do
 	User.create(:username => params[:username], :password => params[:password])
 	redirect :profiles
+	  @user = User.where(username: params[:username]).first
+	  if @user == null 
+	  	redirect '/signup'
+	  elsif @user.username != params[:username]
+	  	redirect '/signup'
+	  else
+		  if @user.password == params[:password]
+		    redirect '/'
+		  else
+		    redirect '/signup'
+		  end
+	end
 end
+
+
 
 # when user clicks the upload_post buttom
 post "/blog" do
