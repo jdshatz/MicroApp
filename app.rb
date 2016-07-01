@@ -36,7 +36,7 @@ post "/signup" do
 	  	redirect '/'
 	  elsif @user.username != params[:username]
 	  	redirect '/signup'
-	  	flash[:alert] = "Sign-up failed." #Do we have the sinatra-flash gem set up?
+	  	flash[:alert] = "Sign-up failed."
 	end
 end
 
