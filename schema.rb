@@ -11,16 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160630171802) do
 
   create_table "posts", force: :cascade do |t|
     t.string "text"
     t.string "title"
   end
-=======
+
 ActiveRecord::Schema.define(version: 20160629203146) do
->>>>>>> 862f71ec69c95862708ff66c672e068e95eb8291
 
   create_table "users", force: :cascade do |t|
     t.string "username"

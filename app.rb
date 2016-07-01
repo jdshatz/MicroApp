@@ -9,6 +9,7 @@ get "/" do
 end
 
 get "/blog" do
+	@posts = Post.all
 	erb :blog
 end
 

@@ -1,7 +1,6 @@
 /* UNIFORM CODE FOR ALL PAGES */
 
 /* UNIFORM BODY */
-
 body {
 	font-family: sans-serif;
 	text-align: center;
@@ -16,9 +15,7 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-<<<<<<< HEAD
 }
-
 
 div.transbox {
 	height: 80%;
@@ -30,21 +27,6 @@ div.transbox {
 	filter: alpha(opacity=65);
 }
 
-=======
-}
-
-
-div.transbox {
-	height: 80%;
-	width: 60%;
-	margin: auto;
-	background-color: #ffffff;
-	border: 1px solid black;
-	opacity: 0.65;
-	filter: alpha(opacity=65);
-}
-
->>>>>>> 8a4da5c02592342293b83910c733e5fd066b8027
 div.transbox p {
 	margin: 5%;
 	font-weight: bold;
@@ -103,15 +85,10 @@ div.transbox p {
 	color: black;
 }
 
-
 .header > .headerContent >.navbar > ul {
 	margin: 0;
 	padding: 0;
 }
-
-
-.header > .headerContent > .navbar > ul > img
-	
 
 .header > .headerContent > .navbar > ul > li {
 	list-style: none;
@@ -130,7 +107,6 @@ div.transbox p {
 	height:400px;
 }
 
-<<<<<<< HEAD
 .logo img{
 	width:1000px;
 	height:250px;
@@ -139,8 +115,7 @@ div.transbox p {
 	margin: 0 auto;
 	opacity: 0px;
 }
-=======
->>>>>>> 8a4da5c02592342293b83910c733e5fd066b8027
+
 /* UNIFORM Social Media Side Bar */
 
 .sociialnavbar {
@@ -206,5 +181,3 @@ span {
 .footer p{
 	text-align:center;
 }
-
-/* END - UNIFORM FOOTER 
