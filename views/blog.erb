@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Culture Shock - Blog</title>
+	<title>Culture Shocked - Blog</title>
 </head>
 <body>
-	<h1>Existing Blogs</h1>
+	<div>
+		<h1>
+			<span style="color:blue;font-weight:bold">
+				Blog
+			</span>
+		</h1>
+	</div>
 
-<!-- 		<% @posts.each do |anything| %>
-		title: <%= anything.title %>
-		text: <%= anything.text %>
-		<br>
-		<% end %> -->
-
-	<h1>Add your own post</h1>
 	<form>
-		<article>put a title here here</article>
-		<input type="textarea" name="title">
-		<article>put some text here</article>
-		<input type="textarea" name="text">
-		<input type="submit" name="input" placeholder="upload_post">
+
+			<label for="title">Subject:</label>
+			<textarea></textarea>
+			<br>
+			<br>
+
+			What's on your mind?
+			<br>
+			(150 or fewer characters:
+			<br>
+			<label for="text">Your Post:</label>
+			<textarea cols="50" rows="4" name=""></textarea>
+			<br>
+
+			<input type="submit" onclick="validateForm()">
+			<p></p>
+
+			Newsfeed - 10 most recent posts:
+			<br>
+			<label for="feed">Newsfeed</label>
+			<textarea cols="50" rows="40" name="comment"></textarea>
+			<br>
+			<br>
+			<p></p>
+
 	</form>
 </body>
 </html>
