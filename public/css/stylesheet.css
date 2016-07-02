@@ -99,6 +99,13 @@ div.transbox p {
 	color: white;
 }
 
+
+/*UNIFORM Login and Logout buttons*/
+#log li a {
+	color: #0099FF;
+	padding: 20px, 0px, 0px, 100px;
+}
+
 /* UNIFORM Social Media Side Bar */
 .sociialnavbar {
 	height: 300px;
