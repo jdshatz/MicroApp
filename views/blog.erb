@@ -5,9 +5,9 @@
 			</span>
 		</h1>
 	</div>
-	<form>
+	<form method="POST" action="/blog">
 			<label for="title">Subject:</label>
-			<textarea></textarea>
+			<textarea name="subject"></textarea>
 			<br>
 			<br>
 
@@ -16,7 +16,7 @@
 			(150 or fewer characters:
 			<br>
 			<label for="text">Your Post:</label>
-			<textarea cols="50" rows="4" name=""></textarea>
+			<textarea cols="50" rows="4" name="content"></textarea>
 			<br>
 
 			<input type="submit" onclick="validateForm()">
@@ -25,8 +25,11 @@
 			Newsfeed - 10 most recent posts:
 			<br>
 			<label for="feed">Newsfeed</label>
-			<textarea cols="50" rows="40" name="comment"></textarea>
-			<br>
-			<br>
-			<p></p>
+			<textarea cols="50" rows="40" name="comment">
+			
+			<% @posts.each do |anything| %>
+			Subject: <%= anything.subject %>
+			Content: <%= anything.content %>
+			<% end %>
+			 </textarea>
 	</form>

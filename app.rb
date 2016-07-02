@@ -5,6 +5,8 @@ require "./models"
 enable :sessions
 set :database, "sqlite3:database.sqlite3"
 
+# THE ROUTES FOR WHEN USERS TO GO A SPECIFIC URL
+
 get "/" do 
 	erb :index
 end
@@ -31,14 +33,12 @@ get "/signup" do
 	erb :signup
 end
 
-get "/login-failed" do
-  erb :login_failed
-end
-
 get '/logout/?' do
 	session[:user_id] = nil
 	"you are now logged out"
 end
+
+# WHEN USERS POST FORMS
 
 post '/signup' do
   User.create(
@@ -48,7 +48,7 @@ post '/signup' do
   "you are now signed up, go to the login page to login"
 end
 
-#Sign-in button/activate session
+# Sign-in button/activate session
 post "/login" do
   @user = User.where(username: params[:username]).first
   if @user && @user.password == params[:password]
@@ -59,9 +59,10 @@ post "/login" do
   end
 end
 
-# when user clicks the upload_post buttom
+# When user clicks the upload_post button
 post "/blog" do
-	Post.create(:title => params[:title], :text => params[:text])
+	Post.create(:subject => params[:subject], :content => params[:content])
+	@posts = Post.all
 	erb :blog
 end
 
