@@ -48,7 +48,7 @@ post '/signup' do
 end
 
 #Sign-in button/activate session
-post "/signin" do
+post "/login" do
   @user = User.where(username: params[:username]).first
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
