@@ -45,6 +45,7 @@ post '/signup' do
     username: params[:username],
     password: params[:password],
   )
+  "you are now signed up, go to the login page to login"
 end
 
 #Sign-in button/activate session
