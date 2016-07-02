@@ -24,7 +24,7 @@ get "/profiles" do
 end
 
 get "/login" do
-	erb :myprofile
+	erb :login
 end
 
 get "/signup" do
@@ -52,7 +52,7 @@ post "/signin" do
   @user = User.where(username: params[:username]).first
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
-    redirect "/blog"
+    "you are not logged in"
   else
   end
 end
