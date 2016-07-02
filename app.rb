@@ -23,59 +23,37 @@ get "/profiles" do
 	erb :profiles
 end
 
-get "/signup" do
-	erb :signup
+get "/login" do
+	erb :myprofile
 end
 
-# when user clicks the signup button
-# post "/signup" do
-# 	User.create(:username => params[:username], :password => params[:password])
-# 	redirect :profiles
-# 	  @user = User.where(username: params[:username]).first
-# 	  if @user != null && @user.password != null 
-# 	  	redirect '/'
-# 	  elsif @user.username != params[:username]
-# 	  	redirect '/signup'
-# 	  	flash[:alert] = "Sign-up failed."
-# 	end
-# end
-
-post '/signup' do
-  User.create(
-    username: params[:username],
-    password: params[:password],
-  )
-
-  # flash[:notice] = "You have signed up"
-  # redirect "/"
+get "/signup" do
+	erb :signup
 end
 
 get "/login-failed" do
   erb :login_failed
 end
 
-#Sign-in button/activate session
-# post "/signin" do
-# 	@user = User.where(username: params[:username]).first
-# 	  if @user != null && @user.password == params[:password] 
-# 	  	session[:user_id] = @user.id
-# 	  	redirect '/'
-# 	  else
-# 		redirect '/signin' #Is this redundant, if we don't have a sign-in page?
-# 		flash[:alert] = "Sign-in failed."
-# 	end
-# end
+get '/logout/?' do
+	session[:user_id] = nil
+	"you are now logged out"
+end
+
+post '/signup' do
+  User.create(
+    username: params[:username],
+    password: params[:password],
+  )
+end
 
 #Sign-in button/activate session
-post "/myprofile" do
+post "/signin" do
   @user = User.where(username: params[:username]).first
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
-    # flash[:notice] = "You are signed in"
     redirect "/blog"
   else
-    # flash[:error] = "You are not signed in"
-    # redirect "/login-failed"
   end
 end
 
