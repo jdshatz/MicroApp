@@ -52,8 +52,9 @@ post "/login" do
   @user = User.where(username: params[:username]).first
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
-    "you are not logged in"
+    "you are now logged in"
   else
+  	"your password is incorrect"
   end
 end
 
