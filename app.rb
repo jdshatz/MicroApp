@@ -12,7 +12,7 @@ get "/" do
 end
 
 get "/blog" do
-	@posts = Post.all
+	@posts = Post.last(10).reverse
 	erb :blog
 end
 
@@ -100,7 +100,7 @@ end
 # When user clicks the upload_post button
 post "/blog" do
 	Post.create(:subject => params[:subject], :content => params[:content])
-	@posts = Post.all
+	@posts = Post.last(10).reverse
 	erb :blog
 end
 
