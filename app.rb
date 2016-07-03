@@ -110,7 +110,12 @@ post '/myprofile' do
 end
 
 post '/createprofile' do
-	Profile.create(fname: params[:fname], lname: params[:lname], location: params[:location], bio: params[:bio], user_id: params[:user_id])
+	Profile.create(
+		fname: params[:fname],
+		lname: params[:lname],
+		location: params[:location],
+		bio: params[:bio],
+	)
 	redirect '/myprofile'
 end
 
