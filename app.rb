@@ -12,7 +12,7 @@ get "/" do
 end
 
 get "/blog" do
-	@posts = Post.last(10).reverse
+	@posts = Post.all
 	erb :blog
 end
 
@@ -38,9 +38,9 @@ get '/logout/?' do
 	"you are now logged out"
 end
 
-get '/profile_prompt' do
-	erb :profile_prompt
-end
+# get '/profile_prompt' do
+# 	erb :profile_prompt
+# end
 
 get '/createprofile' do
 	erb :createprofile
@@ -100,7 +100,7 @@ end
 # When user clicks the upload_post button
 post "/blog" do
 	Post.create(:subject => params[:subject], :content => params[:content])
-	@posts = Post.last(10).reverse
+	@posts = Post.all
 	erb :blog
 end
 
@@ -109,7 +109,7 @@ post '/myprofile' do
 	redirect 'myprofile'
 end
 
-post '/profile_prompt' do
+post '/createprofile' do
 	Profile.create(fname: params[:fname], lname: params[:lname], location: params[:location], bio: params[:bio], user_id: params[:user_id])
 	redirect '/myprofile'
 end

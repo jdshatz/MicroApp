@@ -1,6 +1,6 @@
 class CreateProfileTable < ActiveRecord::Migration
   def change
-  	    create_table :profile do |table|
+  	create_table :profile do |table|
       table.string :fname
       table.string :lname
       tabble.string :location

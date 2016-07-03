@@ -1,37 +1,37 @@
-<div class="row">
-	<div class="col-md-6 col-md-offset-4">
-		<h2 class="create-profile">Create Your Profile</h2>
+	<div class="title">
+		<h1>
+			<span style="color:blue;font-weight:bold">
+				Create Your Profile
+			</span>
+		</h1>
+	</div>
 
-			<form method="POST" action="/profile_prompt" class="create-profile">
-				<p>*All fields required</p>
+		<form method="POST" action="/createprofile">
 
+			<p>*All fields required</p>
 
-
-			<label for="text">First name:</label><br>
-			<textarea cols="50" rows="1" name="fname" placeholder="First name" required></textarea>
+			<label for="fname">First Name:</label>
+			<textarea cols="50" rows="1" type "text" name="fname" placeholder="First name" required></textarea>
 			<br>
 			<br>
 
-
-			<label for="text">Last name:</label><br>
-			<textarea cols="50" rows="1" name="lname" placeholder="Last name" required></textarea>
+			<label for="lname">Last Name:</label>
+			<textarea cols="50" rows="1" type="text name="lname" placeholder="Last name" required></textarea>
 			<br>
 			<br>
 
-
-			<label for="text">Location:</label><br>
-			<textarea cols="50" rows="1" name="locaiton" placeholder="Location" required></textarea>
+			<label for="location">Location:</label>
+			<textarea cols="50" rows="1" type="text" name="location" placeholder="Location" required></textarea>
 			<br>
 			<br>
 
-
-			<label for="text">Biography:</label><br>
-			<textarea cols="50" rows="6" name="bio" placeholder="Biography" required></textarea>
+			<label for="bio">Biography:</label><br>
+			<textarea cols="50" rows="6" type="text" name="bio" placeholder="Biography" required></textarea>
 			<br>
 			<br>
 
-			<label for="text">Userid:</label><br>
-			<textarea cols="50" rows="1" name="user_id" placeholder="Userid" required>
+			<label for="user_id">Userid:</label><br>
+			<textarea cols="50" rows="1" type="hidden" name="user_id" placeholder="Userid" required>
 			</textarea>
 			<br>
 
@@ -40,7 +40,7 @@
 			<br>
 
 
-			</form>
+		</form>
 
 	</div>
 </div>
