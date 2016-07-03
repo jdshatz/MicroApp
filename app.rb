@@ -115,16 +115,14 @@ post '/profile_prompt' do
 end
 
 post '/updateprofile' do
-	update_profile
 	redirect '/myprofile'
 end
 
 post '/delete_account' do
-	Post.where("user_id=#{current_user.id}").destroy_all
-	Profile.where("user_id=#{current_user.id}").destroy_all
-	FolloweridsUser.where("user_id=#{current_user.id}").delete_all
-	FolloweridsUser.where("followerid_id=#{current_user.id}").delete_all
-	User.destroy_all(:id => current_user.id)
-	session.clear
-	redirect '/account_deleted'
+  User.delete(
+    username: params[:username],
+    password: params[:password],
+  )
+	"You have deleted your account."
+	"You can sign back up and start blog with us again! "
 end

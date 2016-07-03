@@ -2,23 +2,44 @@
 	<div class="col-md-6 col-md-offset-4">
 		<h2 class="create-profile">Create Your Profile</h2>
 
-
 			<form method="POST" action="/profile_prompt" class="create-profile">
 				<p>*All fields required</p>
-				<input type="text" name="fname" placeholder="First name" required>
-				<br>
-				<br>
-				<input type="text" name="lname" placeholder="Last name" required>
-				<br>
-				<br>
-				<input type="text" name="location" placeholder="Location" required>
-				<br>
-				<br>
-				<textarea name="bio" placeholder="Biography" required rows="3" cols="40"></textarea>
-				<br>
-				<br>
-				<input type="hidden" name="user_id" value="<%=current_user.id%>">
-				<input type="submit">
+
+
+
+			<label for="text">First name:</label><br>
+			<textarea cols="50" rows="1" name="fname" placeholder="First name" required></textarea>
+			<br>
+			<br>
+
+
+			<label for="text">Last name:</label><br>
+			<textarea cols="50" rows="1" name="lname" placeholder="Last name" required></textarea>
+			<br>
+			<br>
+
+
+			<label for="text">Location:</label><br>
+			<textarea cols="50" rows="1" name="locaiton" placeholder="Location" required></textarea>
+			<br>
+			<br>
+
+
+			<label for="text">Biography:</label><br>
+			<textarea cols="50" rows="6" name="bio" placeholder="Biography" required></textarea>
+			<br>
+			<br>
+
+			<label for="text">Userid:</label><br>
+			<textarea cols="50" rows="1" name="user_id" placeholder="Userid" required>
+			</textarea>
+			<br>
+
+			<input type="submit">
+			<br>
+			<br>
+
+
 			</form>
 
 	</div>
