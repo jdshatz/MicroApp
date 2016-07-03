@@ -38,8 +38,46 @@ get '/logout/?' do
 	"you are now logged out"
 end
 
-# WHEN USERS POST FORMS
+get '/profile_prompt' do
+	erb :profile_prompt
+end
 
+get '/createprofile' do
+	erb :createprofile
+end
+
+get '/updateprofile' do
+	erb :updateprofile
+end
+
+get '/delete_account' do
+	erb :delete_account
+end
+
+get '/account_deleted' do
+	erb :account_deleted
+end
+
+
+def current_user
+	if session[:user_id]
+		@current_user = User.find(session[:user_id])
+	end
+end
+
+# def update_profile
+# 	@profile = current_user.profile
+# 	@profile.fname = params[:fname]
+# 	@profile.lname = params[:lname]
+# 	@profile.location = params[:location]
+# 	@profile.bio = params[:bio]
+# 	@profile.save
+# end
+
+
+
+
+# WHEN USERS POST FORMS
 post '/signup' do
   User.create(
     username: params[:username],
@@ -66,4 +104,27 @@ post "/blog" do
 	erb :blog
 end
 
+post '/myprofile' do
+	Post.create(message: params[:message], user_id: current_user.id)
+	redirect 'myprofile'
+end
 
+post '/profile_prompt' do
+	Profile.create(fname: params[:fname], lname: params[:lname], location: params[:location], bio: params[:bio], user_id: params[:user_id])
+	redirect '/myprofile'
+end
+
+post '/updateprofile' do
+	update_profile
+	redirect '/myprofile'
+end
+
+post '/delete_account' do
+	Post.where("user_id=#{current_user.id}").destroy_all
+	Profile.where("user_id=#{current_user.id}").destroy_all
+	FolloweridsUser.where("user_id=#{current_user.id}").delete_all
+	FolloweridsUser.where("followerid_id=#{current_user.id}").delete_all
+	User.destroy_all(:id => current_user.id)
+	session.clear
+	redirect '/account_deleted'
+end
