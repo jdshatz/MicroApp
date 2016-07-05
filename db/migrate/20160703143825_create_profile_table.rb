@@ -5,7 +5,7 @@ class CreateProfileTable < ActiveRecord::Migration
       table.string :lname
       table.string :location
       table.string :bio
-      table.string :user_id
+      table.integer :user_id
       table.timestamps
   	end
   end
