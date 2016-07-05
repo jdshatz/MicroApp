@@ -38,18 +38,6 @@ get '/logout/?' do
 	"you are now logged out"
 end
 
-# get '/profile_prompt' do
-# 	erb :profile_prompt
-# end
-
-get '/createprofile' do
-	erb :createprofile
-end
-
-get '/updateprofile' do
-	erb :updateprofile
-end
-
 get '/delete_account' do
 	erb :delete_account
 end
@@ -65,19 +53,18 @@ def current_user
 	end
 end
 
-# def update_profile
+# WHEN USERS POST FORMS
+post '/updateprofile' do
+	#code here to update the profile
 # 	@profile = current_user.profile
 # 	@profile.fname = params[:fname]
 # 	@profile.lname = params[:lname]
 # 	@profile.location = params[:location]
 # 	@profile.bio = params[:bio]
 # 	@profile.save
-# end
+	erb :updateprofile
+end
 
-
-
-
-# WHEN USERS POST FORMS
 post '/signup' do
   User.create(
     username: params[:username],
