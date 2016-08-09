@@ -35,7 +35,7 @@ end
 
 get '/logout/?' do
 	session[:user_id] = nil
-	"you are now logged out"
+	redirect "/"
 end
 
 get '/delete_account' do
@@ -71,6 +71,7 @@ post '/signup' do
     password: params[:password],
   )
   "you are now signed up, go to the login page to login"
+  redirect "/"
 end
 
 # Sign-in button/activate session
@@ -78,9 +79,10 @@ post "/login" do
   @user = User.where(username: params[:username]).first
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
-    "you are now logged in"
+    redirect "/"
   else
   	"your password is incorrect"
+  	redirect "/"
   end
 end
 
