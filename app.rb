@@ -93,6 +93,7 @@ post "/blog" do
 	erb :blog
 end
 
+
 post '/myprofile' do
 	Post.create(message: params[:message], user_id: current_user.id)
 	redirect 'myprofile'
@@ -108,7 +109,7 @@ post '/createprofile' do
 	redirect '/myprofile'
 end
 
-post '/updateprofile' do
+get '/updateprofile' do
 	redirect '/myprofile'
 end
 
